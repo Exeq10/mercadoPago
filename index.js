@@ -18,6 +18,7 @@ app.get("/", function (req, res) {
   res.status(200).send("Servidor Funcionando");
 });
 
+
 app.post("/create_preference", (req, res) => {
   let preference = {
     items: [
