@@ -30,8 +30,8 @@ app.post("/create_preference", (req, res) => {
       },
     ],
     back_urls: {
-      success: "http://localhost:5173/",
-      failure: "http://localhost:5173/",
+      success: "https://conduzcamosalrefugio.org/",
+      failure: "https://conduzcamosalrefugio.org/",
       pending: "",
     },
     auto_return: "approved",
