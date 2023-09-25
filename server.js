@@ -10,7 +10,9 @@ const client_secret = process.env.CLIENTSECRET
 
 // REPLACE WITH YOUR ACCESS TOKEN AVAILABLE IN: https://developers.mercadopago.com/panel
 mercadopago.configure({
-  accessToken: accessToken,
+  client_id : client_id,
+  client_secret: client_secret
+  
   
   
 });
