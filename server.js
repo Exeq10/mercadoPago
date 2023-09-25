@@ -25,12 +25,14 @@ app.post("/create_preference", (req, res) => {
         title: req.body.description,
         unit_price: Number(req.body.price),
         quantity: Number(req.body.quantity),
-      },
-    ],
-
+        
     payment_methods: {
       installments: 12,
     },
+      },
+      
+    ],
+
     back_urls: {
       success: "https://conduzcamosalrefugio.org/",
       failure: "https://conduzcamosalrefugio.org/",
