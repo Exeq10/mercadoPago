@@ -25,20 +25,22 @@ app.post("/create_preference", (req, res) => {
         title: req.body.description,
         unit_price: Number(req.body.price),
         quantity: Number(req.body.quantity),
-        
-    payment_methods: {
-      installments: 12,
-    },
       },
-      
     ],
-
+    payment_methods: {
+      excluded_payment_methods: [
+        // Excluye métodos de pago en efectivo (Ejemplo: Pago Fácil, Rapipago, etc.)
+        {
+          id: "cash",
+        },
+      ],
+      installments: 12, // Configura el número máximo de cuotas
+    },
     back_urls: {
       success: "https://conduzcamosalrefugio.org/",
       failure: "https://conduzcamosalrefugio.org/",
       pending: "",
     },
-
     auto_return: "approved",
   };
 
@@ -53,6 +55,7 @@ app.post("/create_preference", (req, res) => {
       console.log(error);
     });
 });
+
 
 const PORT = process.env.PORT || 8080;
 
